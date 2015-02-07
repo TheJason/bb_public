@@ -1,12 +1,23 @@
+<cfif themeCol neq "default">
+	<cfset colNum = 8>
+<cfelse>
+	<cfset colNum = 12>
+</cfif>
+
 <cfinclude template="inc/header.cfm">
+<cfoutput>
 <section class="slice bg-3 animate-hover-slide">
     <div class="w-section inverse blog-grid">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 col-bg-white">
+            	<cfif themeCol eq "left-col">
+                	<cfinclude template="inc/sidenav.cfm">
+                </cfif>
+                
+                <div class="col-md-#colNum# col-bg-white">
                     <div class="row">
                         <div class="col-md-12">
-                            <h2>Bable Blogs Template Column One</h2>
+                            <h2>Bable Blogs Template</h2>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.
                                 Duis ultricies pharetra magna. Donec accumsan malesuada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus...  
@@ -39,8 +50,14 @@
                         </div>
                     </div>
                 </div>
+                
+                <cfif themeCol eq "right-col">
+                	<cfinclude template="inc/sidenav.cfm">
+                </cfif>
+                
             </div>
         </div>
     </div>
 </section>
+</cfoutput>
 <cfinclude template="inc/footer.cfm">
