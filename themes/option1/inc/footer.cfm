@@ -95,5 +95,27 @@
 <script type="text/javascript" src="/assets/themes/option1/assets/sticky/jquery.sticky.js"></script>
 <script type="text/javascript" src="/assets/themes/option1/js/jquery.wp.custom.js"></script>
 <script type="text/javascript" src="/assets/themes/option1/js/jquery.wp.switcher.js"></script>
+
+
+<cfif listLast(cgi.path_info,'/') eq "home">
+	<script src="/assets/themes/option1/layerslider/js/greensock.js" type="text/javascript"></script>
+    <!-- LayerSlider script files -->
+    <script src="/assets/themes/option1/layerslider/js/layerslider.transitions.js" type="text/javascript"></script>
+    <script src="/assets/themes/option1/layerslider/js/layerslider.kreaturamedia.jquery.js" type="text/javascript"></script>
+    <!-- Initializing the slider -->
+    <script>
+        jQuery("#layerslider").layerSlider({
+            pauseOnHover: true,
+            autoPlayVideos: false,
+            skinsPath: '/assets/themes/option1/layerslider/skins/',
+            responsive: false,
+            responsiveUnder: 1280,
+            layersContainer: 1280,
+            skin: 'borderlessdark3d',
+            hoverPrevNext: true,
+        });
+    </script>
+</cfif>
+
 </body>
 </html>

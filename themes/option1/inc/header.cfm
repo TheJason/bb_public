@@ -8,6 +8,7 @@
      <!-- Required -->
     <link href="/assets/themes/option1/css/global-style.css" rel="stylesheet" type="text/css" media="screen">
     <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="/assets/themes/option1/layerslider/css/layerslider.css" type="text/css">
 </head>
 <body>
 
